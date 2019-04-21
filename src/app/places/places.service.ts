@@ -8,6 +8,7 @@ export class PlacesService {
     constructor() {
     }
 
+    // tslint:disable-next-line:variable-name
     private _places: Place[] = [
         new Place('p1',
             'Manhattan Mansion',
