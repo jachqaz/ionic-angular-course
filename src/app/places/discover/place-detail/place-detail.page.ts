@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {NavController} from '@ionic/angular';
 
 @Component({
     selector: 'app-place-detail',
@@ -7,10 +9,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PlaceDetailPage implements OnInit {
 
-    constructor() {
+    constructor(private rouuter: Router, private  navCtrl: NavController) {
     }
 
     ngOnInit() {
     }
 
+    onBookPlace() {
+        // this.rouuter.navigateByUrl('/places/tabs/discover');
+        this.navCtrl.navigateBack('/places/tabs/discover');
+        // this.navCtrl.pop();
+    }
 }
